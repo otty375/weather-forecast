@@ -1,4 +1,4 @@
-package com.example.weatherservice;
+package com.example.weatherforecast;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

@@ -1,4 +1,4 @@
-package com.example.weatherservice;
+package com.example.weatherforecast;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
