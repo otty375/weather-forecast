@@ -11,7 +11,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
 public class WeatherController {
 
     @Autowired
-    WeatherService weatherService;
+    WeatherForecastService weatherService;
 
     @RequestMapping(value = "/weather", method = GET)
     public String getWeather(@RequestParam(name = "city", defaultValue = "Tokyo") String city) {
