@@ -15,6 +15,8 @@ public class WeatherController {
 
     @RequestMapping(value = "/weather", method = GET)
     public String getWeather(@RequestParam(name = "city", defaultValue = "Tokyo") String city) {
-        return weatherService.getWeather(city);
+        WeatherForecastDto dto = weatherService.getWeather(city);
+
+        return dto.getTodayForecast().getTelop();
     }
 }
