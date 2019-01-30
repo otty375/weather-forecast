@@ -5,6 +5,27 @@
     <title>Hello Thymeleaf</title>
 </head>
 <body>
-<h1 th:text="${message}"></h1>
+<h1 th:text="${city}"></h1>
 </body>
+
+<table>
+    <tr>
+        <th>日付</th>
+        <th>天気</th>
+        <th>アイコン</th>
+    </tr>
+
+    <tr>
+        <td th:text="${today.date}"></td>
+        <td th:text="${today.telop}"></td>
+        <td th:text="${today.imageUrl}"></td>
+    </tr>
+
+    <!--<tr th:each="customer : ${customers}" th:object="${customer}">-->
+        <!--<td th:text="*{id}">1</td>-->
+        <!--<td th:text="*{lastName}">Suzuki</td>-->
+        <!--<td th:text="*{firstName}">Taro</td>-->
+    <!--</tr>-->
+
+</table>
 </html>
