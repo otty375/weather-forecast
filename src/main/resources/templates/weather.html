@@ -15,10 +15,10 @@
         <th>アイコン</th>
     </tr>
 
-    <tr>
-        <td th:text="${today.date}"></td>
-        <td th:text="${today.telop}"></td>
-        <td th:text="${today.imageUrl}"></td>
+    <tr th:each="forecast : ${forecasts}">
+        <td th:text="${forecast.date}"></td>
+        <td th:text="${forecast.telop}"></td>
+        <td th:text="${forecast.imageUrl}"></td>
     </tr>
 
     <!--<tr th:each="customer : ${customers}" th:object="${customer}">-->

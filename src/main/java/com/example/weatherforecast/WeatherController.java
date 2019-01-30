@@ -18,7 +18,7 @@ public class WeatherController {
     public String getWeather(Model model, @RequestParam(name = "city", defaultValue = "Tokyo") String city) {
         WeatherForecastDto dto = weatherService.getWeather(city);
         model.addAttribute("city", dto.getTitle());
-        model.addAttribute("today", dto.getTodayForecast());
+        model.addAttribute("forecasts", dto.getForecasts());
         return "weather";
     }
 }
