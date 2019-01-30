@@ -5,7 +5,7 @@
     <title>Hello Thymeleaf</title>
 </head>
 <body>
-<h1 th:text="${city}"></h1>
+<h1 th:text="${title}"></h1>
 </body>
 
 <table>
@@ -15,17 +15,11 @@
         <th>アイコン</th>
     </tr>
 
-    <tr th:each="forecast : ${forecasts}">
-        <td th:text="${forecast.date}"></td>
-        <td th:text="${forecast.telop}"></td>
-        <td th:text="${forecast.imageUrl}"></td>
+    <tr th:each="forecast : ${forecasts}" th:object="${forecast}">
+        <td th:text="*{date}"></td>
+        <td th:text="*{telop}"></td>
+        <td><img th:src="*{imageUrl}"></td>
     </tr>
-
-    <!--<tr th:each="customer : ${customers}" th:object="${customer}">-->
-        <!--<td th:text="*{id}">1</td>-->
-        <!--<td th:text="*{lastName}">Suzuki</td>-->
-        <!--<td th:text="*{firstName}">Taro</td>-->
-    <!--</tr>-->
 
 </table>
 </html>
