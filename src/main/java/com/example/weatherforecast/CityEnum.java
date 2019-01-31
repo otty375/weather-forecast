@@ -2,8 +2,6 @@ package com.example.weatherforecast;
 
 import lombok.Getter;
 
-import java.util.Arrays;
-
 @Getter
 public enum CityEnum {
 

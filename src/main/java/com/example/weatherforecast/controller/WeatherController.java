@@ -5,6 +5,7 @@ import com.example.weatherforecast.service.WeatherForecastService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -22,5 +23,10 @@ public class WeatherController {
         model.addAttribute("title", weatherForecast.getTitle());
         model.addAttribute("forecasts", weatherForecast.getForecasts());
         return "weather";
+    }
+
+    @ExceptionHandler({IllegalArgumentException.class})
+    public String handleError() {
+        return "error";
     }
 }
