@@ -13,7 +13,6 @@ public class WeatherForecastServiceImpl implements WeatherForecastService {
     @Override
     public WeatherForecast getWeather(String city) {
         String cityId = CityEnum.valueOf(city.toUpperCase()).getId();
-        // TODO 取れなかったときの処理
 
         RestTemplate restTemplate = new RestTemplate();
         WeatherForecast response = restTemplate.getForObject(WEATHER_URL + cityId, WeatherForecast.class);
