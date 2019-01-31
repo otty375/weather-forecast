@@ -1,5 +1,6 @@
-package com.example.weatherforecast;
+package com.example.weatherforecast.resource;
 
+import com.example.weatherforecast.resource.ForecastDto;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 

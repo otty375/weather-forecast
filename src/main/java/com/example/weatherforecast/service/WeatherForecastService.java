@@ -1,5 +1,9 @@
-package com.example.weatherforecast;
+package com.example.weatherforecast.service;
 
+import com.example.weatherforecast.CityEnum;
+import com.example.weatherforecast.resource.WeatherForecast;
+import com.example.weatherforecast.resource.WeatherForecastDto;
+import com.example.weatherforecast.resource.WeatherForecastDtoFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
