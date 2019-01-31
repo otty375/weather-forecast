@@ -8,7 +8,7 @@ import org.springframework.web.client.RestTemplate;
 @Component
 public class WeatherForecastServiceImpl implements WeatherForecastService {
 
-    private static final String WEATHER_URL = "http://weather.livedoor.com/forecast/webservice/json/v1?city=";
+    private final String WEATHER_URL = "http://weather.livedoor.com/forecast/webservice/json/v1?city=";
 
     @Override
     public WeatherForecast getWeather(String city) {
