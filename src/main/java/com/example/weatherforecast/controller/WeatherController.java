@@ -1,6 +1,6 @@
 package com.example.weatherforecast.controller;
 
-import com.example.weatherforecast.resource.WeatherForecastDto;
+import com.example.weatherforecast.resource.WeatherForecast;
 import com.example.weatherforecast.service.WeatherForecastService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,9 +18,9 @@ public class WeatherController {
 
     @RequestMapping(value = "/weather", method = GET)
     public String getWeather(Model model, @RequestParam(name = "city", defaultValue = "tokyo") String city) {
-        WeatherForecastDto dto = weatherService.getWeather(city);
-        model.addAttribute("title", dto.getTitle());
-        model.addAttribute("forecasts", dto.getForecasts());
+        WeatherForecast weatherForecast = weatherService.getWeather(city);
+        model.addAttribute("title", weatherForecast.getTitle());
+        model.addAttribute("forecasts", weatherForecast.getForecasts());
         return "weather";
     }
 }

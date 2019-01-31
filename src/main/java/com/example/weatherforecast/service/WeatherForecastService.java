@@ -1,6 +1,6 @@
 package com.example.weatherforecast.service;
 
-import com.example.weatherforecast.resource.WeatherForecastDto;
+import com.example.weatherforecast.resource.WeatherForecast;
 
 public interface WeatherForecastService {
     /**
@@ -8,6 +8,6 @@ public interface WeatherForecastService {
      * @param city
      * @return
      */
-    WeatherForecastDto getWeather(String city);
+    WeatherForecast getWeather(String city);
 
 }
