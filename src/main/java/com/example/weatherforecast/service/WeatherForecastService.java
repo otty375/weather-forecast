@@ -9,5 +9,4 @@ public interface WeatherForecastService {
      * @return
      */
     WeatherForecast getWeather(String city);
-
 }

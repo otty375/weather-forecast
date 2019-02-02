@@ -2,6 +2,11 @@ package com.example.weatherforecast;
 
 import lombok.Getter;
 
+/**
+ * 都道府県の県庁所在地のID番号を紐付けるEnum
+ * 他の地域はこちらを参照
+ * http://weather.livedoor.com/forecast/rss/primary_area.xml
+ */
 @Getter
 public enum CityEnum {
 
