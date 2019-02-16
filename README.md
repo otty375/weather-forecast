@@ -2,10 +2,12 @@
 指定された都道府県の天気予報を表示するWebアプリケーションです。
 
 weather-forecast-answerフォルダが完成形のアプリケーションです。
+
 weather-forecast-handsonフォルダはハンズオン用のフォルダです。
 
 # 起動
 weather-forecast-answerフォルダに移動し、以下のコマンドを実行してください。
+
 `./mvnw spring-boot:run`
 
 以下のURLにアクセスし、起動後画面が表示されればOKです。
