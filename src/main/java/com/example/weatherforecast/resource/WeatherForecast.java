@@ -11,76 +11,76 @@ import java.util.List;
  */
 @Getter
 public class WeatherForecast {
-    public String publicTime;
-    public String title;
-    public Description description;
-    public String link;
-    public List<Forecast> forecasts;
-    public Location location;
-    public List<PinpointLocation> pinpointLocation;
-    public Copyright copyright;
+    private String publicTime;
+    private String title;
+    private Description description;
+    private String link;
+    private List<Forecast> forecasts;
+    private Location location;
+    private List<PinpointLocation> pinpointLocation;
+    private Copyright copyright;
 
     @Getter
     public static class Description {
-        public String text;
-        public String publicTime;
+        private String text;
+        private String publicTime;
     }
 
     @Getter
     public static class Forecast {
-        public String dateLabel;
-        public String telop;
-        public String date;
-        public Temperature temperature;
-        public Image image;
+        private String dateLabel;
+        private String telop;
+        private String date;
+        private Temperature temperature;
+        private Image image;
     }
 
     @Getter
     public static class Temperature {
-        public TemperatureInfo min;
-        public TemperatureInfo miz;
+        private TemperatureInfo min;
+        private TemperatureInfo miz;
     }
 
     @Getter
     public static class TemperatureInfo {
-        public String celsius;
-        public String fahrenheit;
+        private String celsius;
+        private String fahrenheit;
     }
 
     @Getter
     public static class Image {
-        public String width;
-        public String url;
-        public String title;
-        public String height;
-        public String link;
+        private String width;
+        private String url;
+        private String title;
+        private String height;
+        private String link;
     }
 
     @Getter
     public static class Location {
-        public String city;
-        public String area;
-        public String prefecture;
+        private String city;
+        private String area;
+        private String prefecture;
 
     }
 
     @Getter
     public static class PinpointLocation {
-        public String link;
-        public String name;
+        private String link;
+        private String name;
     }
 
     @Getter
     public static class Copyright {
-        public List<Provider> provider;
-        public String link;
-        public String title;
-        public Image image;
+        private List<Provider> provider;
+        private String link;
+        private String title;
+        private Image image;
     }
 
     @Getter
     public static class Provider {
-        public String link;
-        public String name;
+        private String link;
+        private String name;
     }
 }
