@@ -8,5 +8,5 @@ public interface WeatherForecastService {
      * @param city
      * @return
      */
-    WeatherForecast getWeather(String city);
+    WeatherForecast getWeather(String city) throws Exception;
 }

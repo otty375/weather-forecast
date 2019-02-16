@@ -1,5 +1,6 @@
 package com.example.weatherforecast.controller;
 
+import com.example.weatherforecast.CityNotFoundException;
 import com.example.weatherforecast.resource.WeatherForecast;
 import com.example.weatherforecast.service.WeatherForecastService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,14 +23,14 @@ public class WeatherController {
     }
 
     @RequestMapping(value = "/weather", method = GET)
-    public String getWeather(Model model, @RequestParam(name = "city", defaultValue = "tokyo") String city) {
+    public String getWeather(Model model, @RequestParam(name = "city", defaultValue = "tokyo") String city) throws Exception {
         WeatherForecast weatherForecast = weatherService.getWeather(city);
         model.addAttribute("title", weatherForecast.getTitle());
         model.addAttribute("forecasts", weatherForecast.getForecasts());
         return "weather";
     }
 
-    @ExceptionHandler({IllegalArgumentException.class})
+    @ExceptionHandler({CityNotFoundException.class})
     public String handleError() {
         return "error";
     }

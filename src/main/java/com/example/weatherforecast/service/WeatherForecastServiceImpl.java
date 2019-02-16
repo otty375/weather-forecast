@@ -19,9 +19,9 @@ public class WeatherForecastServiceImpl implements WeatherForecastService {
     }
 
     @Override
-    public WeatherForecast getWeather(String city) {
+    public WeatherForecast getWeather(String city) throws Exception {
         // リクエストパラメータからIdを取得
-        String cityId = CityEnum.valueOf(city.toUpperCase()).getId();
+        String cityId = CityEnum.getCity(city).getId();
         // 天気予報APIを叩く
         WeatherForecast response = restTemplate.getForObject(WEATHER_URL + cityId, WeatherForecast.class);
 
