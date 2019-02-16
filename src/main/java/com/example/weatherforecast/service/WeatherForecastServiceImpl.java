@@ -11,8 +11,12 @@ public class WeatherForecastServiceImpl implements WeatherForecastService {
 
     private final String WEATHER_URL = "http://weather.livedoor.com/forecast/webservice/json/v1?city=";
 
+    private final RestTemplate restTemplate;
+
     @Autowired
-    private RestTemplate restTemplate;
+    public WeatherForecastServiceImpl(RestTemplate restTemplate) {
+        this.restTemplate = restTemplate;
+    }
 
     @Override
     public WeatherForecast getWeather(String city) {
