@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 @Service
 public class WeatherForecastServiceImpl implements WeatherForecastService {
 
-    private final String WEATHER_URL = "http://weather.livedoor.com/forecast/webservice/json/v1?city=";
+    private final String WEATHER_URL = "http://weather.livedoor.com/forecast/webservice/json/v1?city={cityId}";
 
     private final RestTemplate restTemplate;
 
@@ -22,8 +22,8 @@ public class WeatherForecastServiceImpl implements WeatherForecastService {
     public WeatherForecast getWeather(String city) throws Exception {
         // リクエストパラメータからIdを取得
         String cityId = CityEnum.getCity(city).getId();
-        // 天気予報APIを叩く
-        WeatherForecast response = restTemplate.getForObject(WEATHER_URL + cityId, WeatherForecast.class);
+        // Idを埋め込んで天気予報APIを叩く
+        WeatherForecast response = restTemplate.getForObject(WEATHER_URL, WeatherForecast.class, cityId);
 
         return response;
     }
