@@ -1,6 +1,6 @@
 package com.example.weatherforecast.controller;
 
-import com.example.weatherforecast.CityNotFoundException;
+import com.example.weatherforecast.resource.CityNotFoundException;
 import com.example.weatherforecast.resource.WeatherForecast;
 import com.example.weatherforecast.service.WeatherForecastService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,16 +15,16 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
 @Controller
 public class WeatherController {
 
-    private final WeatherForecastService weatherService;
+    private final WeatherForecastService weatherForecastService;
 
     @Autowired
     public WeatherController(WeatherForecastService weatherService) {
-        this.weatherService = weatherService;
+        this.weatherForecastService = weatherService;
     }
 
     @RequestMapping(value = "/weather", method = GET)
     public String getWeather(Model model, @RequestParam(name = "city", defaultValue = "tokyo") String city) throws Exception {
-        WeatherForecast weatherForecast = weatherService.getWeather(city);
+        WeatherForecast weatherForecast = weatherForecastService.getWeather(city);
         model.addAttribute("title", weatherForecast.getTitle());
         model.addAttribute("forecasts", weatherForecast.getForecasts());
         return "weather";

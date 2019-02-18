@@ -1,4 +1,4 @@
-package com.example.weatherforecast;
+package com.example.weatherforecast.resource;
 
 /**
  * 地域が見つからなかった時の独自例外クラス

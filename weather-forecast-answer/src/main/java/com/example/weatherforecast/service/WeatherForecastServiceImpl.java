@@ -1,6 +1,6 @@
 package com.example.weatherforecast.service;
 
-import com.example.weatherforecast.CityEnum;
+import com.example.weatherforecast.resource.CityEnum;
 import com.example.weatherforecast.resource.WeatherForecast;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
