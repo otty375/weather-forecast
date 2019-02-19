@@ -9,6 +9,8 @@ import java.util.List;
  * 詳細はこちらを参照
  * http://weather.livedoor.com/weather_hacks/webservice
  */
+// 演習2-1 天気予報リソースクラスを確認しよう（編集不要）
+// 演習2-2 lombokのアノテーションを確認しよう（編集不要）
 @Getter
 public class WeatherForecast {
     private String publicTime;

@@ -1,3 +1,5 @@
+
+<!-- 演習7-3 ビュー名に対応したHTMLファイルを確認しよう（編集不要） -->
 <!doctype html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -6,6 +8,7 @@
     <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
+<!-- 演習7-4 Thymeleafで値の表示の確認をしよう（編集不要） -->
 <h1 th:text="${title}"></h1>
 </body>
 
@@ -16,6 +19,7 @@
         <th>アイコン</th>
     </tr>
 
+    <!-- 演習7-5 Thymeleafでオブジェクトの表示の確認をしよう（編集不要） -->
     <tr th:each="forecast : ${forecasts}" th:object="${forecast}">
         <td th:text="*{date}"></td>
         <td th:text="*{telop}"></td>

@@ -6,20 +6,23 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-@Service
+// 演習5-1 サービスのBean定義をしよう
+
 public class WeatherForecastServiceImpl implements WeatherForecastService {
 
     private final String WEATHER_URL = "http://weather.livedoor.com/forecast/webservice/json/v1?city={cityId}";
 
-    private final RestTemplate restTemplate;
+    // 演習5-3 RestTemplateをコンストラクタインジェクションしよう
 
-    @Autowired
-    public WeatherForecastServiceImpl(RestTemplate restTemplate) {
-        this.restTemplate = restTemplate;
-    }
+
+
+
+
 
     @Override
     public WeatherForecast getWeather(String city) throws Exception {
+        // 演習5-2 メソッドの処理を確認しよう（編集不要）
+
         // リクエストパラメータからIdを取得
         String cityId = CityEnum.getCity(city.toLowerCase()).getId();
         // Idを埋め込んで天気予報APIを叩く

@@ -19,11 +19,14 @@
 	</properties>
 
 	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
 
+		<!-- 演習1-1 Mavenの設定にspring-boot-starter-webを追加しよう -->
+		<!-- ここにコピー＆ペーストしてください -->
+
+
+
+
+		<!-- 演習1-2 他のMavenの設定を確認しよう（編集不要） -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>

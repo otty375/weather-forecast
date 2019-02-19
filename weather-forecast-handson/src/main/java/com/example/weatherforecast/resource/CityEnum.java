@@ -69,6 +69,7 @@ public enum CityEnum {
         this.name = name;
     }
 
+    // 演習8-1 例外をスローしている処理を確認しよう（編集不要）
     public static CityEnum getCity(String name) throws CityNotFoundException {
         return Arrays.asList(CityEnum.values()).stream()
                 .filter(cityEnum -> cityEnum.getName().equals(name))
