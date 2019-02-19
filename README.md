@@ -5,7 +5,7 @@ weather-forecast-answerフォルダが完成形のアプリケーションです
 
 weather-forecast-handsonフォルダはハンズオン用のフォルダです。
 
-# 起動
+# 完成形アプリケーション起動
 weather-forecast-answerフォルダに移動し、以下のコマンドを実行してください。
 
 `./mvnw spring-boot:run`
