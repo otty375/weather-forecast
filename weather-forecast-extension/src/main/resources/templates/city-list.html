@@ -1,0 +1,18 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>WeatherForecast</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<h1>天気予報表示サービス</h1>
+<p></p>
+</body>
+
+<ul th:each="city : ${cities}">
+    <li><a th:href="@{/weather(city=${city.name})}" th:text="${city.name}"></a></li>
+</ul>
+
+
+</html>

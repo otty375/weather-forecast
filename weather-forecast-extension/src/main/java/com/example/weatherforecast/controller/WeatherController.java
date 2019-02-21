@@ -1,5 +1,6 @@
 package com.example.weatherforecast.controller;
 
+import com.example.weatherforecast.resource.CityEnum;
 import com.example.weatherforecast.resource.CityNotFoundException;
 import com.example.weatherforecast.resource.WeatherForecast;
 import com.example.weatherforecast.service.WeatherForecastService;
@@ -7,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -20,6 +22,13 @@ public class WeatherController {
     @Autowired
     public WeatherController(WeatherForecastService weatherService) {
         this.weatherForecastService = weatherService;
+    }
+
+    @GetMapping(value = "/")
+    public String getCityList(Model model) {
+        CityEnum[] cityEnums = weatherForecastService.getCityList();
+        model.addAttribute("cities", cityEnums);
+        return "city-list";
     }
 
     @RequestMapping(value = "/weather", method = GET)

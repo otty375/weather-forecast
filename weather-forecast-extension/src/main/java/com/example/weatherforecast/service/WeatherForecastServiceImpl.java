@@ -27,4 +27,9 @@ public class WeatherForecastServiceImpl implements WeatherForecastService {
 
         return response;
     }
+
+    @Override
+    public CityEnum[] getCityList() {
+        return CityEnum.values();
+    }
 }

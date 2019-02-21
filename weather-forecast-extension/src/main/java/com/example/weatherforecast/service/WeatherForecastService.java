@@ -1,5 +1,6 @@
 package com.example.weatherforecast.service;
 
+import com.example.weatherforecast.resource.CityEnum;
 import com.example.weatherforecast.resource.WeatherForecast;
 
 public interface WeatherForecastService {
@@ -9,4 +10,10 @@ public interface WeatherForecastService {
      * @return
      */
     WeatherForecast getWeather(String city) throws Exception;
+
+    /**
+     * 都道府県の一覧を返す
+     * @return
+     */
+    CityEnum[] getCityList();
 }
