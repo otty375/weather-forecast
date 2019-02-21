@@ -1,0 +1,26 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>WeatherForecast</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<h1 th:text="${title}"></h1>
+</body>
+
+<table>
+    <tr>
+        <th>日付</th>
+        <th>天気</th>
+        <th>アイコン</th>
+    </tr>
+
+    <tr th:each="forecast : ${forecasts}" th:object="${forecast}">
+        <td th:text="*{date}"></td>
+        <td th:text="*{telop}"></td>
+        <td><img th:src="*{image.url}"></td>
+    </tr>
+
+</table>
+</html>
