@@ -11,7 +11,7 @@
 </body>
 
 <ul th:each="city : ${cities}">
-    <li><a th:href="@{/weather(city=${city.name})}" th:text="${city.name}"></a></li>
+    <li><a th:href="@{/weather(city=${city.name})}" th:text="${city.kanjiName}"></a></li>
 </ul>
 
 
