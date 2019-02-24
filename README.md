@@ -1,18 +1,37 @@
 # weather-forecast
 指定された都道府県の天気予報を表示するWebアプリケーションです。
 
-`weather-forecast-answer`フォルダが完成形のアプリケーションです。
+`weather-forecast-answer`フォルダが解答用プロジェクトです。
 
 `weather-forecast-handson`フォルダはハンズオン用のフォルダです。
 
-# 完成形アプリケーション起動
-`weather-forecast-answer`フォルダに移動し、以下のコマンドを実行してください。
+# 解答用プロジェクトの完成形アプリケーション起動
+
+ハンズオンで使用する解答用プロジェクトが起動するかどうか確認します。
+
+IntelliJから起動する場合：
+
+以下のファイルを開いてください。
+
+weather-forecast-answer/src/main/java/com/example/weatherforecast/WeatherForecastApplication.java
+
+IntelliJメニューの`Run -> Run WeatherForecastApplication`を選択するか、 `WeatherForecastApplication`クラスの左にある緑色の三角マークをクリックしてください。
+
+ターミナル等から起動する場合：
+
+`weather-forecast-answer`フォルダに移動して以下のコマンドを実行してください。
 
 `./mvnw spring-boot:run`
 
 以下のURLにアクセスし、起動後画面が表示されればOKです。
 
 http://localhost:8080/weather
+
+動作確認が終わったらアプリケーションを終了させましょう。
+
+IntelliJで終了する場合は、起動ログの左のメニューの赤い四角をクリックします。
+
+ターミナル等から終了する場合は`control + c`です。
 
 # 起動後画面
 ## 地域指定なし
