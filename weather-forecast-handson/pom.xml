@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>weather-forecast</artifactId>
+	<artifactId>weather-forecast-handson</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>weather-forecast</name>
-	<description>Demo project for Spring Boot</description>
+	<name>weather-forecast-handson</name>
+	<description>Hands-on project for javajo event</description>
 
 	<properties>
 		<java.version>1.8</java.version>
